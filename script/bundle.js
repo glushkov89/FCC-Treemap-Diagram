@@ -18394,24 +18394,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	//Margins
 	const mg = { t: 70, b: 90, r: 30, l: 70 };
 	//Diag
-	const dia = [1000, 600];
+	const dia = [1500, 650];
 	//SVG
 	const s = {
 		h: mg.t + dia[1] + mg.b,
 		w: mg.l + dia[0] + mg.r
 	};
-	//COLORBREWER
-	const clr = [
-		"#ffffd9",
-		"#edf8b1",
-		"#c7e9b4",
-		"#7fcdbb",
-		"#41b6c4",
-		"#1d91c0",
-		"#225ea8",
-		"#253494",
-		"#081d58"
-	];
 
 	/*-------------SVG--------------*/
 	let svg = d3
@@ -18457,7 +18445,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	};
 
 	const drawDiagram = (arr, sl, tlt, color) => {
-		console.log(arr);
+		//console.log(arr);
 		sl.selectAll("rect")
 			.data(arr)
 			.enter()
@@ -18474,9 +18462,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			)
 			.attr("data-value", (d) => d.value)
 			.attr("fill", (d) =>
-				d3.interpolateSinebow(
-					color(d.height === 0 ? d.data.category : d.data.name)
-				)
+				color(d.height === 0 ? d.data.category : d.data.name)
 			)
 			.on("mouseover", (d) => {
 				tlt
@@ -18504,11 +18490,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	d3.json(URL).then((data) => {
 		const layout = processData(data);
 		let dataArray = layout.descendants();
-		let color = d3
-			.scaleLinear()
-			.domain(generateColorScale(dataArray))
-			.range([0, 1]);
-		console.log();
+		let colorDomain = generateColorScale(dataArray);
+		console.log(colorDomain);
+		let color = d3.scaleOrdinal(d3.schemeSpectral[11]).domain(colorDomain);
+		//.range(d3.schemeSpectral);
+		console.log(color("Narrative Film"));
 		drawDiagram(dataArray, sel, tooltipDiv, color);
 	});
 
