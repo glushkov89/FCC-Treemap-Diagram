@@ -1,61 +1,59 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300");
 body {
-	background-color: #dde7ee;
+    background-color: #dde7ee;
 }
 
 #footer {
-	text-align: center;
-	font-family: "Nunito", sans-serif;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	padding-bottom: 8px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    left: 0;
+    width: 100%;
+    padding-bottom: 8px;
 }
 
 .fa {
-	font-size: 5vh;
-	color: #021c1e;
+    font-size: 5vh;
+    color: #021c1e;
 }
 
 #description {
-	font-size: large;
+    font-size: large;
 }
 
 #title {
-	font-size: x-large;
+    font-size: x-large;
 }
 
 #legend {
-	font-size: small;
-	/* text-shadow: 1px 1px 0px rgba(0, 0, 0, 1); */
+    font-size: small;
+    /* text-shadow: 1px 1px 0px rgba(0, 0, 0, 1); */
 }
 
 div.mytooltip {
-	font-family: "Nunito", sans-serif;
-	font-size: smaller;
-	position: absolute;
-	text-align: center;
-	width: auto;
-	height: auto;
-	padding: 10px;
-	background: #4a5761;
-	color: wheat;
-	border: 0px;
-	border-radius: 2px;
-	box-shadow: 0px 0px 5px 0px #000;
-	pointer-events: none;
+    font-family: "Nunito", sans-serif;
+    font-size: smaller;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: #4a5761;
+    color: wheat;
+    border: 0px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px 0px #000;
+    pointer-events: none;
 }
 
 svg {
-	font-family: "Nunito", sans-serif;
-	display: block;
-	margin: 5% auto;
+    font-family: "Nunito", sans-serif;
+    display: block;
+    margin: 5% auto;
 }
 
 a {
-	color: black;
-	text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 /* .diagram {
