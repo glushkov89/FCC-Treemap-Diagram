@@ -19,15 +19,16 @@ body {
 }
 
 #description {
-	font-size: smaller;
+	font-size: large;
 }
 
 #title {
-	font-size: larger;
+	font-size: x-large;
 }
 
 #legend {
-	font-size: smaller;
+	font-size: small;
+	/* text-shadow: 1px 1px 0px rgba(0, 0, 0, 1); */
 }
 
 div.mytooltip {
@@ -50,6 +51,11 @@ svg {
 	font-family: "Nunito", sans-serif;
 	display: block;
 	margin: 5% auto;
+}
+
+a {
+	color: black;
+	text-decoration: none;
 }
 
 /* .diagram {
